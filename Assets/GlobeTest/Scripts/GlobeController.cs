@@ -36,6 +36,8 @@ public class GlobeController : MonoBehaviour
     {
         float lat_rad = poi.Latitude * Mathf.Deg2Rad;
         float long_rad = poi.Longitude * Mathf.Deg2Rad;
+
+        // cos(lat) - gives the parallel of latitude
         float x = -radius * Mathf.Cos(lat_rad) * Mathf.Sin(long_rad);
         float y = Mathf.Sin(lat_rad) * radius;
         float z = radius * Mathf.Cos(lat_rad) * Mathf.Cos(long_rad);
